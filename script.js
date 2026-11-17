@@ -1,4 +1,4 @@
-// ===== 1. Корзина (localStorage) =====
+// 1. Корзина (localStorage) 
 let cart = JSON.parse(localStorage.getItem('coolcar_cart')) || [];
 
 function saveCart() {
@@ -85,7 +85,7 @@ function initAddToCart() {
     });
 }
 
-// ===== 2. Оформление заказа (имитация) =====
+// 2. Оформление заказа (имитация) 
 function initCheckout() {
     const checkoutBtn = document.querySelector('.btn-order');
     if (!checkoutBtn) return;
@@ -106,7 +106,7 @@ function initCheckout() {
     });
 }
 
-// ===== 3. Мобильное меню =====
+// 3. Мобильное меню 
 function initMobileMenu() {
     const menuBtn = document.querySelector('.menu-btn');
     const nav = document.querySelector('.main-nav');
@@ -118,7 +118,7 @@ function initMobileMenu() {
     });
 }
 
-// ===== 4. Фильтры каталога (с сохранением) =====
+// 4. Фильтры каталога 
 function initCatalogFilter() {
     const filterBrand = document.getElementById('filter-brand');
     const filterModel = document.getElementById('filter-model');
@@ -190,16 +190,18 @@ function loadFilters() {
     if (document.getElementById('search-input')) document.getElementById('search-input').value = filters.search;
 }
 
-// ===== 5. Динамическая загрузка каталога =====
+// 5. Загрузка каталога с сервера Render 
 async function loadCatalogFromJSON() {
     const container = document.getElementById('catalog-cards');
     if (!container) return;
 
-    container.innerHTML = '<p class="loading">Загрузка каталога…</p>';
+    container.innerHTML = '<p class="loading">Загрузка каталога с сервера…</p>';
 
     try {
-        const response = await fetch('products.json');
-        if (!response.ok) throw new Error('Не удалось загрузить products.json');
+        // ССЫЛКА НА СЕРВЕР RENDER
+        const response = await fetch('https://coolcar.onrender.com/api/products');
+        if (!response.ok) throw new Error('Ошибка сервера');
+        
         const products = await response.json();
 
         container.innerHTML = '';
@@ -212,7 +214,7 @@ async function loadCatalogFromJSON() {
             article.dataset.year = product.year;
 
             article.innerHTML = `
-                <img src="${product.img}" alt="${product.alt}" class="card-photo">
+                <img src="${product.img}" alt="${product.name}" class="card-photo">
                 <h3>${product.name}</h3>
                 <p class="price">${product.price.toLocaleString('ru-RU')} ₽</p>
                 <button class="btn-add" data-add>В корзину</button>
@@ -226,14 +228,14 @@ async function loadCatalogFromJSON() {
         updateCartUI();
     } catch (error) {
         container.innerHTML = `
-            <p class="error">Не удалось загрузить каталог. Проверьте соединение.</p>
+            <p class="error">Не удалось загрузить каталог. Сервер выключен или произошла ошибка.</p>
             <button class="btn-card" onclick="loadCatalogFromJSON()">Попробовать снова</button>
         `;
         console.error('Ошибка загрузки каталога:', error);
     }
 }
 
-// ===== 6. Форма обратной связи =====
+// 6. Форма обратной связи 
 function initFeedbackForm() {
     const form = document.getElementById('feedback-form');
     if (!form) return;
@@ -292,7 +294,7 @@ function initLiveValidation() {
     });
 }
 
-// ===== 7. API курсов валют =====
+//  7. API курсов валют 
 async function loadCurrencyRates() {
     const container = document.getElementById('currency-rates');
     if (!container) return;
@@ -350,7 +352,7 @@ async function convertProductPrice() {
     }
 }
 
-// ===== 8. Запуск =====
+// 8. Запуск 
 document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('catalog-cards')) {
         loadCatalogFromJSON();
@@ -361,7 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateCartUI();
     initCheckout();
-    initMobileMenu(); // Инициализация мобильного меню
+    initMobileMenu();
     initFeedbackForm();
     initLiveValidation();
     loadCurrencyRates();
