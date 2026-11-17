@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoolCar — магазин автомобильных аксессуаров</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Логотип CoolCar" class="logo-icon">
+            <span class="logo-text">CoolCar</span>
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="cart.html">Корзина <span id="cart-counter" class="cart-counter"></span></a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <button class="search-btn" aria-label="Поиск">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+            <button class="menu-btn" aria-label="Меню">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/car-hero.png" alt="Автомобиль Mercedes с аксессуарами" class="hero-img">
+            <div class="hero-text">
+                <h1>Магазин автомобильных аксессуаров</h1>
+                <p>Подбор по марке и модели автомобиля</p>
+                <a href="catalog.html" class="btn-hero">Узнать больше →</a>
+            </div>
+        </section>
+
+        <section class="popular">
+            <h2>Популярные товары</h2>
+            <div class="cards">
+                <article class="card">
+                    <img src="images/seat.png" alt="Накладки на сиденья" class="card-photo">
+                    <h3>Накладки на сиденья</h3>
+                    <p class="price">2 490 ₽</p>
+                    <button class="btn-add" data-add>В корзину</button>
+                </article>
+                <article class="card">
+                    <img src="images/wheel.png" alt="Оплетка на руль" class="card-photo">
+                    <h3>Оплетка на руль</h3>
+                    <p class="price">1 290 ₽</p>
+                    <button class="btn-add" data-add>В корзину</button>
+                </article>
+                <article class="card">
+                    <img src="images/holder.png" alt="Держатель для телефона" class="card-photo">
+                    <h3>Держатель для телефона</h3>
+                    <p class="price">1 790 ₽</p>
+                    <button class="btn-add" data-add>В корзину</button>
+                </article>
+                <article class="card">
+                    <img src="images/led.png" alt="LED-подсветка" class="card-photo">
+                    <h3>LED-подсветка</h3>
+                    <p class="price">990 ₽</p>
+                    <button class="btn-add" data-add>В корзину</button>
+                </article>
+                <article class="card">
+                    <img src="images/dvr.png" alt="Видеорегистратор" class="card-photo">
+                    <h3>Видеорегистратор</h3>
+                    <p class="price">3 890 ₽</p>
+                    <button class="btn-add" data-add>В корзину</button>
+                </article>
+                <article class="card">
+                    <img src="images/mats.png" alt="Коврики в салон" class="card-photo">
+                    <h3>Коврики в салон</h3>
+                    <p class="price">1 890 ₽</p>
+                    <button class="btn-add" data-add>В корзину</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <img src="images/logo.png" alt="CoolCar" class="footer-logo">
+        <p class="footer-slogan">CoolCar</p>
+        <address>
+            <p>+7 (900) 000-00-00</p>
+            <p>CoolCar@gmail.com</p>
+            <p>ПГТ Бабруйск, ул. Опасная, д.69</p>
+        </address>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

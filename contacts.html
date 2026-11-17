@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — CoolCar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Логотип CoolCar" class="logo-icon">
+            <span class="logo-text">CoolCar</span>
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="cart.html">Корзина <span id="cart-counter" class="cart-counter"></span></a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <button class="search-btn" aria-label="Поиск">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+            <button class="menu-btn" aria-label="Меню">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="contacts-page">
+        <h1 class="page-title">Контакты</h1>
+
+        <section class="contact-info">
+            <p><strong>Адрес:</strong> ПГТ Бабруйск, ул. Опасная, д.69</p>
+            <p><strong>Телефон:</strong> +7 (900) 000-00-00</p>
+            <p><strong>Режим работы:</strong> Пн–Пт 09:00–20:00, Сб–Вс 10:00–18:00</p>
+            <p><strong>Слоган:</strong> Аксессуары, которые делают авто твоим.</p>
+        </section>
+
+        <section class="feedback">
+            <h2>Обратная связь</h2>
+            <form id="feedback-form" novalidate>
+                <label>Имя
+                    <input type="text" name="name">
+                    <span class="field-error" id="name-error"></span>
+                </label>
+                <label>Email
+                    <input type="email" name="email">
+                    <span class="field-error" id="email-error"></span>
+                </label>
+                <label>Сообщение
+                    <textarea name="message" rows="5"></textarea>
+                    <span class="field-error" id="message-error"></span>
+                </label>
+                <button type="submit" class="btn-order">Отправить</button>
+                <p class="form-success" id="form-success"></p>
+            </form>
+        </section>
+
+        <section class="currency-block" id="currency-rates"></section>
+    </main>
+
+    <footer class="main-footer">
+        <img src="images/logo.png" alt="CoolCar" class="footer-logo">
+        <p class="footer-slogan">CoolCar</p>
+        <address>
+            <p>+7 (900) 000-00-00</p>
+            <p>CoolCar@gmail.com</p>
+            <p>ПГТ Бабруйск, ул. Опасная, д.69</p>
+        </address>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

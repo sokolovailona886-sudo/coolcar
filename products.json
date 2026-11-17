@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Накладки на сиденья",
+    "price": 2490,
+    "brand": "toyota",
+    "model": "camry",
+    "year": "2020",
+    "img": "images/seat.png",
+    "alt": "Накладки на сиденья"
+  },
+  {
+    "id": 2,
+    "name": "Оплетка на руль",
+    "price": 1290,
+    "brand": "bmw",
+    "model": "x5",
+    "year": "2015",
+    "img": "images/wheel.png",
+    "alt": "Оплетка на руль"
+  },
+  {
+    "id": 3,
+    "name": "Держатель для телефона",
+    "price": 1790,
+    "brand": "mercedes",
+    "model": "e-class",
+    "year": "2020",
+    "img": "images/holder.png",
+    "alt": "Держатель для телефона"
+  },
+  {
+    "id": 4,
+    "name": "LED-подсветка",
+    "price": 990,
+    "brand": "lada",
+    "model": "camry",
+    "year": "2010",
+    "img": "images/led.png",
+    "alt": "LED-подсветка"
+  },
+  {
+    "id": 5,
+    "name": "Щетки стеклоочистителя",
+    "price": 1490,
+    "brand": "toyota",
+    "model": "camry",
+    "year": "2015",
+    "img": "images/wipers.png",
+    "alt": "Щетки стеклоочистителя"
+  },
+  {
+    "id": 6,
+    "name": "Органайзер в багажник",
+    "price": 1990,
+    "brand": "bmw",
+    "model": "x5",
+    "year": "2020",
+    "img": "images/organizer.png",
+    "alt": "Органайзер в багажник"
+  },
+  {
+    "id": 7,
+    "name": "Солнцезащитный экран",
+    "price": 890,
+    "brand": "mercedes",
+    "model": "e-class",
+    "year": "2015",
+    "img": "images/sunshade.png",
+    "alt": "Солнцезащитный экран"
+  },
+  {
+    "id": 8,
+    "name": "Автомобильное ЗУ",
+    "price": 890,
+    "brand": "lada",
+    "model": "x5",
+    "year": "2010",
+    "img": "images/charger.png",
+    "alt": "Автомобильное ЗУ"
+  },
+  {
+    "id": 9,
+    "name": "Видеорегистратор",
+    "price": 3890,
+    "brand": "toyota",
+    "model": "camry",
+    "year": "2020",
+    "img": "images/dvr.png",
+    "alt": "Видеорегистратор"
+  },
+  {
+    "id": 10,
+    "name": "Спойлер на крышу",
+    "price": 3890,
+    "brand": "bmw",
+    "model": "x5",
+    "year": "2020",
+    "img": "images/spoiler.png",
+    "alt": "Спойлер на крышу"
+  },
+  {
+    "id": 11,
+    "name": "Коврики в салон",
+    "price": 1890,
+    "brand": "mercedes",
+    "model": "e-class",
+    "year": "2020",
+    "img": "images/mats.png",
+    "alt": "Коврики в салон"
+  },
+  {
+    "id": 12,
+    "name": "Ароматизатор",
+    "price": 1890,
+    "brand": "lada",
+    "model": "camry",
+    "year": "2015",
+    "img": "images/aroma.png",
+    "alt": "Ароматизатор"
+  }
+]
